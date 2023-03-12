@@ -1,0 +1,295 @@
+:root{
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --soft-orange-selfcare: hsl(43, 84%, 65%);
+
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --blue: hsl(246, 80%, 60%);
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    background-color: var(--very-dark-blue);
+    color: white;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: 16rem 16rem;
+    grid-template-columns: repeat(4, 14rem);
+    margin: auto;
+    width: 73%;
+    margin-top: 5%;
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+}
+
+/* Profile Section */
+.main-card{
+    grid-row: 1 / span 2;
+}
+
+.profile{
+    position: relative;
+    background-color: var(--blue);
+    border-radius: 25px;
+    padding: 10%;
+    height: 22.5rem;
+    z-index: 2;
+}
+
+.timeframe{
+    position: relative;
+    background-color: var(--dark-blue);
+    height: 12rem;
+    border-radius: 15px;
+    margin-top: -2rem;
+    z-index: 1;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--pale-blue);
+    line-height: 3; 
+}
+
+.specific-timeframe{
+    display: block;
+    background: none;
+    color: var(--pale-blue);
+    border: none;
+}
+
+.specific-timeframe:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.profile-pic{
+    height: 18%;
+    width: 30%;
+    border-radius: 100%;
+    border: 2px solid white;
+}
+
+.desc{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: var(--pale-blue);
+    font-size: 1.0rem;
+}
+
+.name{
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+/* Cards Section */
+.card{
+    display: inline-block;
+    height: 16rem;
+    width: 14rem;
+}
+
+.card-content{
+    position: relative;
+    width: 14rem;
+    height: 12rem;
+    top: -7.5rem;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.card-content:hover{
+    background-color: hsl(236, 40%, 24%);
+}
+
+.card-background{
+    display: inline-block;
+    background-color: var(--soft-orange-selfcare);
+    width: 14rem;
+    height: 10.3rem;
+    margin-bottom: -0.7%;
+    border-radius: 15px;
+}
+
+.bg-logo{
+    position: relative;
+    transform: scale(0.8);
+    margin-left: 8.7rem;
+    margin-top: -3%;
+}
+
+.card-head{
+    font-size: 1rem;
+    font-weight: 500;
+    padding-top: 1.5rem;
+    padding-left: 1.2rem;
+}
+
+.activity-and-logo{
+    display: flex;
+}
+
+.more-logo{
+    margin-left: 7.8rem;
+    margin-top: 2rem;
+}
+
+.more-logo:hover{
+    cursor: pointer;
+}
+
+.current-time{
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.previous-time{
+    font-weight: 400;
+    color: var(--pale-blue);
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+#more-logo-exercise{
+    margin-left: 6rem;
+}
+
+#more-logo-self-care{
+    margin-left: 6rem;
+}
+
+#play-card-bg{
+    background-color: var(--soft-blue-play);
+}
+
+#study-card-bg{
+    background-color: var(--light-red-study);
+}
+
+#work-card-bg{
+    background-color: var(--light-red-work);
+}
+
+#exercise-card-bg{
+    background-color: var(--lime-green-exercise);
+}
+
+#social-card-bg{
+    background-color: var(--violet-social);
+}
+
+#self-care-card-bg{
+    background-color: var(--soft-orange-selfcare);
+}
+
+@media (max-width: 1200px){
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .main-card{
+        width: 350px;
+    }
+
+    .profile{
+        height: 120px;
+        padding: 5%;
+    }
+
+    .timeframe{
+        height: 80px;
+        display: flex;
+        width: 350px;
+    }
+
+    .specific-timeframe{
+        margin-right: 15%;
+    }
+
+    .profile-pic{
+        float: left;
+        height: 90%;
+        width: 25%;
+    }
+
+    .desc{
+        display: inline-block;
+        margin-left: 1rem;
+        margin-top: 0;
+        font-size: 1.3rem;
+    }
+
+    .name{
+        font-size: 1.8rem;
+        margin-left: 7rem;
+        margin-left: 28%;
+        margin-bottom: 5%;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .card{
+        width: 350px;
+        margin-bottom: 0;
+        height: 180px;
+    }
+
+    .card-background{
+        height: 80px;
+        width: 350px;
+    }
+
+    .card-content{
+        position: relative;
+        height: 120px;
+        width: 350px;
+        top: -35px;
+        padding: 2%;
+    }
+
+    .bg-logo{
+        margin-left: 16rem;
+        margin-top: -8px;
+    }
+
+    .more-logo{
+        margin-left: 15rem;
+    }
+
+    .current-time{
+        font-size: 2rem;
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+    .previous-time{
+        display: inline-block;
+        position: relative;
+        margin-left: 13rem;
+        top: -35%;
+    }
+
+    #more-logo-exercise{
+        margin-left: 13.2rem;
+    }
+    
+    #more-logo-self-care{
+        margin-left: 13rem;
+    }
+}
